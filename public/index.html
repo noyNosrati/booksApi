@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+    <title>Books API documentation</title>
+</head>
+
+<body>
+    <div class="container-fluid pb-5">
+        <div class="container pb-5">
+            <h1 class="text-center p-5">Books API - documentation</h1>
+            <h2 class="title-route"> /BOOKS</h2>
+
+            <h3>All</h3>
+
+
+            <div class="get-bg">
+                <div><span class="get-btn">GET</span>
+                    <span class="route">/books</span>
+                    <span class="explain">get all books</span>
+                </div>
+            </div>
+            <br>
+            <hr>
+            <h3>Search by</h3>
+            <div class="get-bg d-flex col-11">
+                <div class="pe-3"><span class="get-btn">GET</span></div>
+                <div>
+                    <span class="route">/books/search?s=<span class="changes">key-word</span>
+                    </span>
+                    <div class="explain">Get books by searching a full/partial name or info </div>
+                    <div>
+                        <li class="pt-4 pb-2">you can add pagenation:</li>
+                        /books/search?s=<span class="changes">key-word</span>&page=<span
+                            class="changes">page-number</span>&perPage=<span class="changes">books-perPage</span>
+                        <div>{defualt page = 1 , defualt perPage = 10}</div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="get-bg d-flex col-11">
+                <div class="pe-3"><span class="get-btn">GET</span></div>
+                <div>
+                    <span class="route">/books/category/<span class="changes">catName</span>
+                    </span>
+                    <div class="explain">Get books by searching a category. Valid options: Romance /Adventure /Science
+                        Fiction /Fantacy /Drama /Mystery novel</div>
+                    <div>
+                        <li class="pt-4 pb-2">you can add pagenation:</li>
+                        /books/category/<span class="changes">catName</span>?page=<span
+                            class="changes">page-number</span>&perPage=<span class="changes">books-perPage</span>
+                        <div>{defualt page = 1 , defualt perPage = 10}</div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="get-bg d-flex col-11">
+                <div class="pe-3"><span class="get-btn">GET</span></div>
+                <div>
+                    <span class="route">/books/prices?min=<span class="changes">minPrice</span>&max=<span
+                            class="changes">maxPrice</span></span>
+                    <div class="explain">Get books by choosing thier maximum and/or minimum price</div>
+                    <div>
+                        <li class="pt-4 pb-2">you can add pagenation:</li>
+                        /books/prices?min=<span class="changes">minPrice</span>&max=<span
+                            class="changes">maxPrice</span>&page=<span class="changes">
+                            page-number</span>&perPage = <span class="changes">books-perPage</span>
+                        <div>{defualt page = 1 , defualt perPage = 10}</div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="get-bg d-flex col-11">
+                <div class="pe-3"><span class="get-btn">GET</span></div>
+                <div>
+                    <span class="route">/books/single/<span class="changes">idBook</span></span>
+                    <div class="explain">Get one book by its id</div>
+                    <div>
+                        <li class="pt-4 pb-2">you can add pagenation:</li>
+                        /books/prices?min=<span class="changes">minPrice</span>&max=<span
+                            class="changes">maxPrice</span>&page =<span class="changes">
+                            page-number</span>&perPage=<span class="changes">books-perPage</span>
+                        <div>{defualt page = 1 , defualt perPage = 10}</div>
+
+                    </div>
+
+                </div>
+            </div>
+            <br>
+            <hr>
+            <h3>Add book</h3>
+            <div class="post-bg d-flex col-11">
+                <div class="pe-3"><span class="post-btn">POST</span></div>
+                <div>
+                    <span class="route">/books</span>
+                    <div class="explain">Post a new book. Only registered users can add a new book (send a valid token
+                        for identification) </div>
+                    <div class="pt-3">
+                        <div class="lead">Your request must include the following properties: </div>
+                        <ol>
+                            <li>name</li>
+                            <li>info</li>
+                            <li>category</li>
+                            <li>price</li>
+                            <li>img_url (optional)</li>
+                        </ol>
+                    </div>
+                </div>
+
+            </div>
+            <br>
+            <hr>
+            <h3>Edit book</h3>
+            <div class="put-bg d-flex col-11">
+                <div class="pe-3"><span class="put-btn">PUT</span></div>
+                <div>
+                    <span class="route">/books/
+                        <span class="changes">EditId</span>
+                    </span>
+                    <div class="explain">Edit a book by its id. Only the user that posted the book can edit it OR an
+                        admin.(send a valid token for identification)</div>
+                    <div class="pt-3">
+                        <div class="lead">Your request must include the following properties: </div>
+                        <ol>
+                            <li>name</li>
+                            <li>info</li>
+                            <li>category</li>
+                            <li>price</li>
+                            <li>img_url (optional)</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <hr>
+            <h3>Delete book</h3>
+            <div class="del-bg d-flex col-11">
+                <div class="pe-3"><span class="del-btn">DELETE</span></div>
+                <div>
+                    <span class="route">/books/
+                        <span class="changes">Del-Id</span>
+                    </span>
+                    <div class="explain">Delete an existed book by its id. Only the user that posted the book can
+                        delete it OR an admin.(send a valid token for identification) </div>
+
+                </div>
+            </div>
+            <br>
+            <hr>
+            <h2 class="title-route p-5"> /USERS</h2>
+            <h3>Sign Up</h3>
+            <div class="post-bg d-flex col-11">
+                <div class="pe-3"><span class="post-btn">POST</span></div>
+                <div>
+                    <span class="route">/users/signUp</span>
+                    <div class="explain">Signing Up </div>
+                    <div class="pt-3">
+                        <div class="lead">Your request must include the following properties: </div>
+                        <ol>
+                            <li>name</li>
+                            <li>email(must be unique)</li>
+                            <li>password</li>
+                            <li>role(optional)</li>
+                        </ol>
+                    </div>
+                </div>
+
+            </div>
+            <h3>Login</h3>
+            <div class="post-bg d-flex col-11">
+                <div class="pe-3"><span class="post-btn">POST</span></div>
+                <div>
+                    <span class="route">/users/login</span>
+                    <div class="explain">Login(if the process has succeeded, you will receive a token valid for 60
+                        minutes)</div>
+                    <div class="pt-3">
+                        <div class="lead">Your request must include the following properties: </div>
+                        <ol>
+                            <li>email</li>
+                            <li>password</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <h3>User information</h3>
+            <div class="get-bg d-flex col-11">
+                <div class="pe-3"><span class="get-btn">GET</span></div>
+                <div>
+                    <span class="route">/users/userInfo</span>
+                    <div class="explain">Get user information. Every user can only see his own information.(send a
+                        valid token for identification) </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <footer class="container-fluid">
+        <div class="container">
+            <div class="float-start pt-5">
+                Fullstack Web Developer © Noy Nosrati 2023
+
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

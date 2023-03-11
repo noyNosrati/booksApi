@@ -1,0 +1,102 @@
+body {
+    font-family: sans-serif;
+}
+.title-route{
+    text-align: center;
+    text-decoration: underline;
+    padding: 24px;
+}
+h3{
+    padding: 48px 128px;
+}
+.get-bg {
+    border: 2px solid skyblue;
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 24px;
+    background: rgba(135, 207, 235, 0.5);
+    border-radius: 12px;
+    margin-bottom: 24px;
+}
+.post-bg {
+    border: 2px solid rgb(42, 118, 46);
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 24px;
+    background: #22b14d67;
+    border-radius: 12px;
+    margin-bottom: 24px;
+}
+.put-bg {
+    border: 2px solid orange;
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 24px;
+    background: rgba(255, 166, 0, 0.5);
+    border-radius: 12px;
+    margin-bottom: 24px;
+}
+.del-bg {
+    border: 2px solid red;
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 24px;
+    background: rgba(255, 0, 0, 0.4);
+    border-radius: 12px;
+    margin-bottom: 24px;
+}
+
+
+.get-btn {
+    background: skyblue;
+    width: 10%;
+    padding: 12px;
+    border-radius: 12px;
+    text-align: center;
+}
+.post-btn {
+    background: #22B14C;
+    width: 10%;
+    padding: 12px;
+    border-radius: 12px;
+    text-align: center;
+}
+.put-btn {
+    background: orange;
+    width: 10%;
+    padding: 12px;
+    border-radius: 12px;
+    text-align: center;
+}
+.del-btn {
+    background: red;
+    width: 10%;
+    padding: 12px;
+    border-radius: 12px;
+    text-align: center;
+}
+.route{
+    font-weight: bold;
+    padding: 24px;
+    /* border: 2px solid black; */
+
+
+}
+.changes{
+    color: brown;
+    font-style: italic;
+}
+.explain{
+    text-align: center;
+    padding: 4px;
+    color: rgba(0, 0, 0, 0.7);
+    background: white;
+    margin-top: 16px;
+
+}
+footer{
+    min-height: 130px;
+    background: rgb(57, 55, 55);
+    color: #ffffff;
+
+}

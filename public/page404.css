@@ -1,0 +1,13 @@
+body{
+    background: rgb(0, 0, 0,0.9);
+    color: white;
+}
+.row{
+    min-height: 500px;
+}
+.row h1{
+    font-size: 6em;
+}
+.row h4{
+    font-size: 1.5em;
+}

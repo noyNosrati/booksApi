@@ -47,7 +47,7 @@
             <div class="get-bg d-flex col-11">
                 <div class="pe-3"><span class="get-btn">GET</span></div>
                 <div>
-                    <span class="route">/books/category/<span class="changes">catName</span>
+                    <span class="route">/books/category/<span class="changes">:catName</span>
                     </span>
                     <div class="explain">Get books by searching a category. Valid options: Romance /Adventure /Science
                         Fiction /Fantacy /Drama /Mystery novel</div>
@@ -71,7 +71,7 @@
                         <li class="pt-4 pb-2">you can add pagenation:</li>
                         /books/prices?min=<span class="changes">minPrice</span>&max=<span
                             class="changes">maxPrice</span>&page=<span class="changes">
-                            page-number</span>&perPage = <span class="changes">books-perPage</span>
+                            page-number</span>&perPage=<span class="changes">books-perPage</span>
                         <div>{defualt page = 1 , defualt perPage = 10}</div>
 
                     </div>
@@ -81,13 +81,11 @@
             <div class="get-bg d-flex col-11">
                 <div class="pe-3"><span class="get-btn">GET</span></div>
                 <div>
-                    <span class="route">/books/single/<span class="changes">idBook</span></span>
+                    <span class="route">/books/single/<span class="changes">:idBook</span></span>
                     <div class="explain">Get one book by its id</div>
                     <div>
                         <li class="pt-4 pb-2">you can add pagenation:</li>
-                        /books/prices?min=<span class="changes">minPrice</span>&max=<span
-                            class="changes">maxPrice</span>&page =<span class="changes">
-                            page-number</span>&perPage=<span class="changes">books-perPage</span>
+                        /books/single/<span class="changes">idBook</span>?page=<span class="changes">page-number</span>&perPage=<span class="changes">books-perPage</span>
                         <div>{defualt page = 1 , defualt perPage = 10}</div>
 
                     </div>
@@ -122,8 +120,7 @@
             <div class="put-bg d-flex col-11">
                 <div class="pe-3"><span class="put-btn">PUT</span></div>
                 <div>
-                    <span class="route">/books/
-                        <span class="changes">EditId</span>
+                    <span class="route">/books/<span class="changes">:EditId</span>
                     </span>
                     <div class="explain">Edit a book by its id. Only the user that posted the book can edit it OR an
                         admin.(send a valid token for identification)</div>
@@ -145,8 +142,7 @@
             <div class="del-bg d-flex col-11">
                 <div class="pe-3"><span class="del-btn">DELETE</span></div>
                 <div>
-                    <span class="route">/books/
-                        <span class="changes">Del-Id</span>
+                    <span class="route">/books/<span class="changes">:Del-Id</span>
                     </span>
                     <div class="explain">Delete an existed book by its id. Only the user that posted the book can
                         delete it OR an admin.(send a valid token for identification) </div>
